@@ -6,8 +6,13 @@
 .. meta::
    :yandex-verification: 93edb926b90b12a3
 
-Welcome to yandex_oauth's documentation!
-========================================
+Документация yandex_oauth
+=========================
+
+Спасибо, что воспользовались нашей библиотекой
+
+.. note::
+   Библиотека находится в активной стадии разработки.
 
 .. toctree::
    :maxdepth: 2
@@ -15,9 +20,8 @@ Welcome to yandex_oauth's documentation!
 
 
 
-Indices and tables
-==================
+Предметный указатель
+====================
 
 * :ref:`genindex`
 * :ref:`modindex`
-* :ref:`search`
