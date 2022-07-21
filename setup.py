@@ -6,7 +6,7 @@ setup(
     name='yandex_oauth',
     version=yandex_oauth.__version__,
     packages=find_packages(),
-    description='yandex_oauth - Yandex OAuth Lib',
+    description='Yandex OAuth Lib',
     long_description=open(join(dirname(__file__), 'README.md')).read(),
     author=yandex_oauth.__author__,
     author_email='ya360@uh.net.ru',
@@ -16,7 +16,7 @@ setup(
     #url='https://ya360.uh.net.ru',
     license='GPL-3.0',
     project_urls={
-        #"Documentation": "https://ya360.readthedocs.io/",
+        "Documentation": "https://yandex-oauth.readthedocs.io/",
         "Bug Tracker": "https://github.com/imercury13/yandex_oauth/issues"
     },
     classifiers=[
