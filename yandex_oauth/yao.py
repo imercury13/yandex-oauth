@@ -1,6 +1,6 @@
 """Модуль функций библиотеки"""
 
-import requests, json, time, random
+import requests, json, time, random, pickle
 from . import __version__
 
 def _safe_request(mode, url, headers=None, body=None, try_number=1):
@@ -49,3 +49,35 @@ def get_token_by_code(code, client_id, client_secret):
     body = 'grant_type=authorization_code&code='+str(code)+'&client_id='+str(client_id)+'&client_secret='+str(client_secret)
 	
     return _safe_request(url, headers, body)
+
+def save_token(path, token):
+    """Функция сохранения токенов в pickle хранилище
+    
+    :param path: путь для сохранения хранилища
+    :type path: str
+    :param token: словарь токенов
+    :type config: dict
+    :retunrs: True или False
+    """
+    try:
+        with open(path+'/token.pickle','wb') as f:
+            pickle.dump(token, f)
+    except:
+        return False
+    
+    return True
+
+def load_token(path):
+    """Функция загрузки токенов из хранилища
+    
+    :param path: путь к хранилищу
+    :type path: str
+    :returns: config или False, если нет хранилища
+    """
+    try:
+        with open(path+'/token.pickle','rb') as f:
+            token = pickle.load(f)
+    except:
+        return False
+    else:
+	    return token
