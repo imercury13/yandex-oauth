@@ -48,7 +48,7 @@ def get_token_by_code(code, client_id, client_secret):
     headers={'Host': 'oauth.yandex.ru', 'Content-type': 'application/x-www-form-urlencoded'}
     body = 'grant_type=authorization_code&code='+str(code)+'&client_id='+str(client_id)+'&client_secret='+str(client_secret)
 	
-    return _safe_request(url, headers, body)
+    return _safe_request('post', url, headers, body)
 
 def save_token(path, token):
     """Функция сохранения токенов в pickle хранилище
