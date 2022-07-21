@@ -1,2 +1,2 @@
-# yandex-oauth
+# yandex_oauth
 Yandex OAuth Lib
