@@ -23,9 +23,7 @@ setup(
         'Operating System :: MacOS :: MacOS X',
         'Operating System :: Microsoft :: Windows',
         'Operating System :: POSIX',
-        'Programming Language :: Python',
-        'Intended Audience :: System Administrators'
-
+        'Programming Language :: Python'
     ],
     install_requires=[
 		'requests',
