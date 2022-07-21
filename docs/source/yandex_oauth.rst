@@ -1,10 +1,10 @@
-yandex\_oauth package
-=====================
+Пакет yandex\_oauth
+===================
 
-Submodules
-----------
+Модули
+------
 
-yandex\_oauth.yao module
+Модуль yandex\_oauth.yao
 ------------------------
 
 .. automodule:: yandex_oauth.yao
@@ -12,8 +12,8 @@ yandex\_oauth.yao module
    :undoc-members:
    :show-inheritance:
 
-Module contents
----------------
+Содержимое модуля
+-----------------
 
 .. automodule:: yandex_oauth
    :members:

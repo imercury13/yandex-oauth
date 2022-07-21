@@ -1,5 +1,5 @@
-yandex_oauth
-============
+Функции
+=======
 
 .. toctree::
    :maxdepth: 4
