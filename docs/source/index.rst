@@ -32,7 +32,7 @@
 * :ref:`genindex`
 * :ref:`modindex`
 
-Лицензия
-========
-
-* :ref:`license`
+.. toctree::
+   :caption: Лицензия
+   
+   license
