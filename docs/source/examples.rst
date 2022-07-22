@@ -1,6 +1,8 @@
 Примеры
 =======
 
+.. _ex-1:
+
 №1: Интерактивная функция получения токенов для приложения CLI
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -68,4 +70,45 @@
         else:
             print('\nОшибка создания конфигурационного файла\n')
             exit(1)
+
+№2: Функция загрузки токенов и параметров
++++++++++++++++++++++++++++++++++++++++++
+
+.. code-block:: python
+
+    from . import __path__ as path
+    from yandex_oauth import yao
+
+    def load_config():
+        """Функция загрузки словаря токенов и параметров
+
+        :returns: Словарь с токенами и параметрами или False, если нет pickle хранилища
+        """
+    
+        return yao.load_token(path[0])
+
+№3: Функции загрузки токена и параметра
++++++++++++++++++++++++++++++++++++++++
+В примере :ref:`ex-1` мы добавили в pickle хранилище кроме токенов еще два дополнительных параметра (orgid и adminemail)
+
+.. code-block:: python
+
+    from . import __path__ as path
+    from yandex_oauth import yao
+
+    def load_token():
+        """Функция загрузки токена
+
+        :returns: токен
+        """
+
+        return yao.load_token(path[0])['access_token']
+
+    def load_orgID():
+        """Функция загрузки id организации
+
+        :returns: ID организации
+        """
+
+        return yao.load_token(path[0])['orgid']
 
