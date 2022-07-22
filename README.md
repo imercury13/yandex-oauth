@@ -4,7 +4,4 @@ Yandex OAuth Lib
 ```bash
 pip install yandex-oauth
 ```
-
-```python
-from norgau_oauth import yao
-```
+[Документация по библиотеке](https://yandex-oauth.readthedocs.io/)
