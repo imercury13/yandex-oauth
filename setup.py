@@ -14,7 +14,7 @@ setup(
     maintainer_email='ya360@uh.net.ru',
     download_url='https://github.com/imercury13/yandex_oauth',
     #url='https://ya360.uh.net.ru',
-    license='GPL-3.0',
+    license='MIT',
     project_urls={
         "Documentation": "https://yandex-oauth.readthedocs.io/",
         "Bug Tracker": "https://github.com/imercury13/yandex_oauth/issues"
