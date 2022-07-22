@@ -25,14 +25,11 @@
    usage
    modules
    examples
+   license
+
 
 Предметный указатель
 ====================
 
 * :ref:`genindex`
 * :ref:`modindex`
-
-.. toctree::
-   :caption: Лицензия
-   
-   license

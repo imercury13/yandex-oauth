@@ -21,6 +21,8 @@ else:
     html_theme = 'sphinx_rtd_theme'
 
 master_doc = 'index'
+language = 'ru'
+
 
 # -- Project information -----------------------------------------------------
 
