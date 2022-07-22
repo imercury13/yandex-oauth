@@ -31,3 +31,8 @@
 
 * :ref:`genindex`
 * :ref:`modindex`
+
+Лицензия
+========
+
+* :ref:`license`
