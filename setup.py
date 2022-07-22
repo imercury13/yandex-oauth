@@ -7,7 +7,7 @@ setup(
     version=yandex_oauth.__version__,
     packages=find_packages(),
     description='Yandex OAuth Lib',
-    long_description=open(join(dirname(__file__), 'README.md')).read(),
+    long_description=open(join(dirname(__file__), 'README.rst')).read(),
     author=yandex_oauth.__author__,
     author_email='ya360@uh.net.ru',
     maintainer=yandex_oauth.__author__,
