@@ -1,6 +1,14 @@
 Пакет yandex\_oauth
 ===================
 
+Описание пакета
+---------------
+
+.. automodule:: yandex_oauth
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 Модули
 ------
 
@@ -8,14 +16,6 @@
 ------------------------
 
 .. automodule:: yandex_oauth.yao
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-Содержимое модуля
------------------
-
-.. automodule:: yandex_oauth
    :members:
    :undoc-members:
    :show-inheritance:
