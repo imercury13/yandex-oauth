@@ -39,7 +39,6 @@ author = 'Igor Kuptsov'
 extensions = [
     'sphinx.ext.duration',
     'sphinx.ext.autodoc',
-    'sphinx.ext.viewcode',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
