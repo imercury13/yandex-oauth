@@ -1,6 +1,6 @@
 """Модуль функций библиотеки"""
 
-import requests, json, time, random, pickle
+import requests, json, time, random, pickle, datetime
 from . import __version__
 
 def _safe_request(mode, url, headers=None, body=None, try_number=1):
@@ -51,6 +51,7 @@ def get_token_by_code(code, client_id, client_secret):
     body = 'grant_type=authorization_code&code='+str(code)+'&client_id='+str(client_id)+'&client_secret='+str(client_secret)
     token.update({'client_id':client_id, 'client_secret':client_secret})
     token.update(_safe_request('post', url, headers, body))
+    token.update({'expires_in':datetime.datetime.today()+datetime.delta(seconds=token['expires_in'])})
     
     return token
 
@@ -66,8 +67,24 @@ def refresh_token(token):
     headers={'Host': 'oauth.yandex.ru', 'Content-type': 'application/x-www-form-urlencoded'}
     body = 'grant_type=refresh_token&refresh_token='+token['refresh_token']+'&client_id='+token['client_id']+'&client_secret='+token['client_secret']
     token.update(_safe_request('post', url, headers, body))
+    token.update({'expires_in':datetime.datetime.today()+datetime.delta(seconds=token['expires_in'])})
     
     return token
+
+def check_expire_token(token, delta):
+    """Функция проверки на истечение времени жизни токена
+
+    :param token: Словарь токенов
+    :type token: dict
+    :param delta: Временной интервал, если разница между датой истечения и текущей меньше этого значения, функция вернет True
+    :type delta: datetime.delta
+    :return: True или False
+    :rtype: bool
+    """
+    if token['expires_in'] - datetime.datetime.today() < delta:
+        return True
+    else:
+        return False 
 
 def save_token(path, token):
     """Функция сохранения токенов в pickle хранилище
