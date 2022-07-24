@@ -23,6 +23,7 @@ else:
 master_doc = 'index'
 language = 'ru'
 
+html_extra_path = ["robots.txt"]
 
 # -- Project information -----------------------------------------------------
 
