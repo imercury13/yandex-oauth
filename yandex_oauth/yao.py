@@ -45,14 +45,28 @@ def get_token_by_code(code, client_id, client_secret):
     :rtype: dict
 	"""
 
+    token = dict()
     url = 'https://oauth.yandex.ru/token'
     headers={'Host': 'oauth.yandex.ru', 'Content-type': 'application/x-www-form-urlencoded'}
     body = 'grant_type=authorization_code&code='+str(code)+'&client_id='+str(client_id)+'&client_secret='+str(client_secret)
-	
-    return _safe_request('post', url, headers, body)
+    token.update({'client_id':client_id, 'client_secret':client_secret})
+    token.update(_safe_request('post', url, headers, body))
+    
+    return token
 
 def refresh_token(token):
-
+    """Функция обновления токена
+    
+    :param token: Словарь токенов
+    :type token: dict
+    :return: Обновленный словарь токенов
+    :rtype: dict
+    """
+    url = 'https://oauth.yandex.ru/token'
+    headers={'Host': 'oauth.yandex.ru', 'Content-type': 'application/x-www-form-urlencoded'}
+    body = 'grant_type=refresh_token&refresh_token='+token['refresh_token']+'&client_id='+token['client_id']+'&client_secret='+token['client_secret']
+    token.update(_safe_request('post', url, headers, body))
+    
     return token
 
 def save_token(path, token):
@@ -61,7 +75,7 @@ def save_token(path, token):
     :param path: путь для сохранения хранилища
     :type path: str
     :param token: словарь токенов
-    :type config: dict
+    :type token: dict
     :return: True или False
     :rtype: bool
     """
