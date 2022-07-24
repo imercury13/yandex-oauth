@@ -41,7 +41,8 @@ def get_token_by_code(code, client_id, client_secret):
     :type client_id: str
     :param client_secret: пароль приложения
     :type client_secret: str
-    :returns: Словарь токенов
+    :return: Словарь токенов
+    :rtype: dict
 	"""
 
     url = 'https://oauth.yandex.ru/token'
@@ -61,7 +62,8 @@ def save_token(path, token):
     :type path: str
     :param token: словарь токенов
     :type config: dict
-    :returns: True или False
+    :return: True или False
+    :rtype: bool
     """
     try:
         with open(path+'/token.pickle','wb') as f:
@@ -76,7 +78,7 @@ def load_token(path):
     
     :param path: путь к хранилищу
     :type path: str
-    :returns: Словарь токенов или False, если нет хранилища
+    :return: Словарь токенов или False, если нет хранилища
     """
     try:
         with open(path+'/token.pickle','rb') as f:
