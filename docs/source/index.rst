@@ -20,7 +20,7 @@
 
 .. toctree::
    :maxdepth: 3
-   :caption: Содержание:
+   :caption: Содержание
 
    usage
    modules
