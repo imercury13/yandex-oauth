@@ -23,8 +23,8 @@ else:
 master_doc = 'index'
 language = 'ru'
 
-html_extra_path = ["robots.txt"]
-
+#html_extra_path = ['robots.txt']
+html_baseurl = 'https://yandex-oauth.readthedocs.io/'
 # -- Project information -----------------------------------------------------
 
 project = 'yandex_oauth'
@@ -40,6 +40,7 @@ author = 'Igor Kuptsov'
 extensions = [
     'sphinx.ext.duration',
     'sphinx.ext.autodoc',
+    'sphinx_sitemap',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
