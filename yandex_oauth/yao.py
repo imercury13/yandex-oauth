@@ -50,6 +50,10 @@ def get_token_by_code(code, client_id, client_secret):
 	
     return _safe_request('post', url, headers, body)
 
+def refresh_token(token):
+
+    return token
+
 def save_token(path, token):
     """Функция сохранения токенов в pickle хранилище
     
