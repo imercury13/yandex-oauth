@@ -26,7 +26,7 @@ setup(
         'Programming Language :: Python'
     ],
     install_requires=[
-		'requests',
+        'jreq',
     ],
     include_package_data=True,
 )
