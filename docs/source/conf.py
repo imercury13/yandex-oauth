@@ -23,7 +23,7 @@ else:
 master_doc = 'index'
 language = 'ru'
 
-#html_extra_path = ['robots.txt']
+html_extra_path = ['_static/robots.txt']
 html_baseurl = 'https://yandex-oauth.readthedocs.io/'
 # -- Project information -----------------------------------------------------
 
