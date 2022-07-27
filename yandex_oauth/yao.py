@@ -49,7 +49,7 @@ def check_expire_token(token, delta):
     :param token: Словарь токенов
     :type token: dict
     :param delta: Временной интервал, если разница между датой истечения и текущей меньше этого значения, функция вернет True
-    :type delta: datetime.delta
+    :type delta: datetime.timedelta
     :return: True или False
     :rtype: bool
     """
