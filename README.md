@@ -3,7 +3,7 @@
 Yandex OAuth Lib
 
 ```bash
-pip install yandex-oauth
+pip install yandex_oauth
 ```
 
 [Документация по библиотеке](https://yandex-oauth.readthedocs.io/)
