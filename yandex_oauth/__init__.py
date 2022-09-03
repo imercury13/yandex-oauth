@@ -4,5 +4,6 @@
 
 """
 
-__version__ = '1.1.2'
+from ._version import __version__
+
 __author__ = 'Igor Kuptsov'

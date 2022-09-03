@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=45", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "yandex-oauth"
+description = "Библиотека для Yandex OAuth"
+readme = "README.md"
+requires-python = ">=3.6.9"
+keywords = ["yandex", "yandex-oauth", "yandex-api", "yandex-oauth-api"]
+license = {text = "MIT"}
+classifiers = [
+    'Operating System :: MacOS :: MacOS X',
+    'Operating System :: Microsoft :: Windows',
+    'Operating System :: POSIX',
+    'Programming Language :: Python',
+]
+dependencies = [
+    'jreq>=1.1.0',
+]
+authors = [
+    {name = "Igor Kuptsov", email = "ya360@uh.net.ru"},
+]
+dynamic = ["version"]
+
+[tool.setuptools_scm]
+write_to = "yandex_oauth/_version.py"
+
+[tool.setuptools.dynamic]
+version = {attr = "yandex_oauth/_version.__version__"}
+
+[project.urls]
+"Bug Tracker" = "https://github.com/imercury13/yandex-oauth/issues"
+"Documentation" = "https://yandex-oauth.readthedocs.io/"
+"Download" = "https://github.com/imercury13/yandex-oauth"
