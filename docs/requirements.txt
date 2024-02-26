@@ -1,3 +1,4 @@
 jreq
 yandex-oauth
 sphinx-sitemap
+sphinx-rtd-theme
