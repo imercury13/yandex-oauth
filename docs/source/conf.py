@@ -22,7 +22,7 @@ html_baseurl = 'https://yandex-oauth.readthedocs.io/'
 # -- Project information -----------------------------------------------------
 
 project = 'yandex_oauth'
-copyright = '2022, Igor Kuptsov'
+copyright = '2024, Igor Kuptsov'
 author = 'Igor Kuptsov'
 
 
