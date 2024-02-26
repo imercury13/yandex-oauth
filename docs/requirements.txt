@@ -1,4 +1,4 @@
 jreq
-yandex-oauth
+yandex_oauth
 sphinx-sitemap
 sphinx-rtd-theme
